@@ -12,7 +12,7 @@ function addBookToLibrary() {
   let bookPageValue = document.getElementById("book-page").value;
   let bookStatusValue = document.getElementById("book-status").value;
 
-  // Using the values to create a book object
+  // Using the values to create a book instance
   let newBook = new Book(
     bookNameValue,
     bookAuthorValue,
@@ -47,11 +47,11 @@ function displayBookOnScreen(myLibrary) {
       `<button type="button" class="delete-button">Delete</button>`
   );
 
+  newBookCard.innerHTML = tempLibrary;
+  bookShelf.appendChild(newBookCard);
+
   //   The jsLibrary is only needed to provide the books to tempLibrary,
   //    afterwards it is reset so it can be ready for the next book
-  newBookCard.innerHTML = tempLibrary;
-
-  bookShelf.appendChild(newBookCard);
   jsLibrary = [];
   tempLibrary = [];
 
