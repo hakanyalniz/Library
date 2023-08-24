@@ -32,7 +32,7 @@ body {
   grid-template-rows: auto 1fr;
 }
 
-/* The header, wherein the title is centered and the button is on the rightside */
+/* The header, wherein the title is centered and the button is on the right side */
 .header {
   position: relative;
   display: flex;
