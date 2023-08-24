@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="icon" type="image/x-icon" href="./images/book-outline.svg">
+    <link rel="stylesheet" href="./styles/style.css">
 
 
     <style>
@@ -15,7 +16,26 @@
 
 <body>
 
+    <div class="grid-container">
+        <div class="book-form">
+            <label for="book-name">Book Name</label>
+            <input type="text" name="book-name" id="book-name">
+            <label for="book-author">Author</label>
+            <input type="text" name="book-author" id="book-author">
+            <label for="book-page">Page Number</label>
+            <input type="text" name="book-page" id="book-page">
+            <label for="book-status">Status</label>
+            <input type="text" name="book-status" id="book-status">
+            <button type="button" onclick="addBookToLibrary()">Add</button>
+        </div>
+        <div class="header">
+            <span class="title">Library</span>
+            <button type="button" onclick="showForm()">Add Book</button>
+        </div>
 
+        <div class="book-shelf">
+        </div>
+    </div>
     <script type="text/javascript" src="./scripts/script.js"></script>
 </body>
 

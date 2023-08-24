@@ -15,3 +15,80 @@ html {
   font-size: clamp(1rem, 3.5vw, 1.3rem);
   background-color: rgb(209, 209, 209);
 }
+
+/* To make container take up entire screen */
+html,
+body {
+  height: 100%;
+}
+
+.grid-container {
+  display: grid;
+  position: relative;
+  overflow: auto;
+  height: 100%;
+  background-color: antiquewhite;
+
+  grid-template-rows: auto 1fr;
+}
+
+/* The header, wherein the title is centered and the button is on the rightside */
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 50px;
+  background-color: aliceblue;
+}
+
+.header .title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header button {
+  position: absolute;
+  margin-right: 10px;
+  right: 0;
+}
+
+.book-shelf {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+  height: 300px;
+  width: 300px;
+  border: 1px solid black;
+}
+
+/* The form that appears when Add Book is clicked */
+.book-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  position: absolute;
+  top: 40%;
+  right: 50%;
+
+  background-color: white;
+  box-shadow: 5px 5px 25px black;
+  padding: 30px;
+  border-radius: 10px;
+
+  display: none;
+}
+
+.book-form button {
+  margin-top: 10px;
+}
