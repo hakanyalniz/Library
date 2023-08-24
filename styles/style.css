@@ -1,0 +1,17 @@
+:root {
+  --system-ui: "Roboto", system-ui, "Segoe UI", Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* setting up default font, font size and background color */
+html {
+  font-family: var(--system-ui);
+  font-size: clamp(1rem, 3.5vw, 1.3rem);
+  background-color: rgb(209, 209, 209);
+}
