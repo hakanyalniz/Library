@@ -48,8 +48,8 @@ function displayBookOnScreen(myLibrary) {
   );
 
   newBookCard.innerHTML = tempLibrary;
-  bookShelf.appendChild(newBookCard);
 
+  bookShelf.appendChild(newBookCard);
   //   The jsLibrary is only needed to provide the books to tempLibrary,
   //    afterwards it is reset so it can be ready for the next book
   jsLibrary = [];
