@@ -25,6 +25,7 @@ function addBookToLibrary() {
 
   // Then we call displayBookOnScreen to show these on the screen
   displayBookOnScreen(myLibrary);
+  addDelete();
 
   bookForm.style.display = "none";
 }
@@ -33,21 +34,23 @@ function displayBookOnScreen(myLibrary) {
   let lastBook = myLibrary[myLibrary.length - 1];
   let newBookCard = document.createElement("div");
   newBookCard.classList.add("book-card");
-  //   {name: 'asdasd', author: 'asd', page: 's', status: '22'}
 
   for (let element in lastBook) {
     jsLibrary.push(lastBook[element]);
   }
 
   tempLibrary.push(
-    `Book Name: ${jsLibrary[0]}</br>` +
-      `Author: ${jsLibrary[1]}</br>` +
-      `Page: ${jsLibrary[2]}</br>` +
-      `Status: ${jsLibrary[3]}</br>`
+    `<div class="data-field">Book Name</div> ${jsLibrary[0]}</br>` +
+      `<div class="data-field">Author</div> ${jsLibrary[1]}</br>` +
+      `<div class="data-field">Page</div> ${jsLibrary[2]}</br>` +
+      `<div class="data-field">Status</div> ${jsLibrary[3]}</br>` +
+      `<button type="button" class="delete-button">Delete</button>`
   );
+
   //   The jsLibrary is only needed to provide the books to tempLibrary,
-  //       // afterwards it is reset so it can be ready for the next book
+  //    afterwards it is reset so it can be ready for the next book
   newBookCard.innerHTML = tempLibrary;
+
   bookShelf.appendChild(newBookCard);
   jsLibrary = [];
   tempLibrary = [];
@@ -64,6 +67,17 @@ function ClearFields() {
   document.getElementById("book-author").value = "";
   document.getElementById("book-page").value = "";
   document.getElementById("book-status").value = "";
+}
+
+function addDelete() {
+  let deleteButtons = document.querySelectorAll(".delete-button");
+
+  deleteButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const card = button.parentNode; // Get the parent card element
+      card.remove(); // Remove the card
+    });
+  });
 }
 
 let bookShelf = document.querySelector(".book-shelf");

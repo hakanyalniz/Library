@@ -27,7 +27,7 @@ body {
   position: relative;
   overflow: auto;
   height: 100%;
-  background-color: antiquewhite;
+  background-color: black;
 
   grid-template-rows: auto 1fr;
 }
@@ -49,10 +49,15 @@ body {
   transform: translateX(-50%);
 }
 
-.header button {
+.header .add-book {
   position: absolute;
   margin-right: 10px;
+  padding: 10px;
   right: 0;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  border: none;
+  border-radius: 20px;
 }
 
 .book-shelf {
@@ -65,10 +70,28 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 10px;
+  margin: 20px;
+  padding: 30px;
   height: 300px;
   width: 300px;
-  border: 1px solid black;
+
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgb(77, 77, 77);
+}
+
+.book-card .data-field {
+  padding-top: 10px;
+  font-weight: 500;
+}
+
+.book-card .delete-button {
+  padding: 5px;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  border: none;
+  border-radius: 20px;
 }
 
 /* The form that appears when Add Book is clicked */
@@ -82,7 +105,7 @@ body {
   right: 50%;
 
   background-color: white;
-  box-shadow: 5px 5px 25px black;
+  box-shadow: 5px 5px 10px rgb(77, 77, 77);
   padding: 30px;
   border-radius: 10px;
 
